@@ -24,7 +24,7 @@
                     <p class="text-gray-600">No modules found for this course.</p>
                 @endforelse
             </div>
-            <a href="{{route('dashboard')}}" class="bg-blue-500 text-white px-4 py-2 rounded mt-4">Back</a>
+            <a href="{{route('home')}}" class="bg-blue-500 text-white px-4 py-2 rounded mt-4">Back</a>
         </div>
     </div>
 @endsection

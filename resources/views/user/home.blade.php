@@ -55,6 +55,21 @@
                     @foreach ($courses as $course)
                         <div class="w-64 h-32 bg-white shadow rounded mb-2">
                             <h3 class="text-xl font-semibold mb-2">{{ $course->title }}</h3>
+                            <p class="text-gray-600 mb-4">{{ Str::limit($course->description, 100) }}</p>
+                            <div class="flex justify-between items-center">
+                                @if ($course->users->contains($user->id))
+                                    <a href="{{ route('courses.show', $course->id) }}" class="text-blue-500 hover:underline">View Course</a>
+                                    <form action="{{ route('courses.unenroll', $course->id) }}" method="POST" style="display:inline;">
+                                        @csrf
+                                        <button type="submit" class="text-red-500 hover:underline">Unenroll</button>
+                                    </form>
+                                @else
+                                    <form action="{{ route('courses.enroll', $course->id) }}" method="POST" style="display:inline;">
+                                        @csrf
+                                        <button type="submit" class="text-blue-500 hover:underline">Enroll</button>
+                                    </form>
+                                @endif
+                            </div>
                         </div>
                     @endforeach
                 </div>
