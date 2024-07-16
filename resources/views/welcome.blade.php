@@ -1,4 +1,4 @@
-<x-layouts.app>
+<x-app>
     <x-modals.login></x-modals.login>
 
     {{-- Navigation --}}
@@ -27,7 +27,7 @@
             </div>
         </div>
     </div>
-    <x-layouts.footer></x-layouts.footer>
+    <x-footer></x-footer>
 
     <script src="{{ asset('js/script.js') }}"></script>
-</x-layouts.app>
+</x-app>

@@ -1,4 +1,4 @@
-<x-layouts.app>
+<x-app>
         <div class="w-full h-screen bg-white">
             @foreach ($user->courses as $course)
                 <ul>
@@ -16,5 +16,5 @@
                 </ul>
             @endforeach
         </div>
-    <x-layouts.footer></x-layouts.footer>
-</x-layouts.app>
+    <x-footer></x-footer>
+</x-app>

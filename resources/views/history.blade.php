@@ -1,8 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mx-auto py-8">
-    <h1 class="text-3xl font-bold mb-4">My History</h1>
+
+<div class="w-full">
+    <div class="w-full flex justify-center items-center py-5 my-5">
+        <div>
+            <div class="w-72 h-72 bg-white rounded-full shadow">
+                <img src="" alt="" class="w-full h-full rounded-full">
+            </div>
+            <p class="text-white text-center text-2xl font-bold py-3">{{ $user->name }}</p>
+        </div>
+    </div>
+
+    @foreach ($user->courses as $course)
+        <div class="w-full flex gap-4">
+            <div class="bg-white w-96 h-60 shadow rounded">
+
+            </div>
+        </div>
+    @endforeach
+    
+
     <div class="bg-white shadow-md rounded-lg p-6 mb-4">
         <h2 class="text-2xl font-semibold mb-4">Courses</h2>
         <ul>
@@ -60,6 +78,6 @@
             @endforeach
         </ul>
     </div>
-    <a href="{{ route('dashboard') }}" class="bg-blue-500 text-white px-4 py-2 rounded mt-4">Back</a>
+    <a href="{{ url('home') }}" class="bg-blue-500 text-white px-4 py-2 rounded mt-4">Back</a>
 </div>
 @endsection

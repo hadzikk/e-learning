@@ -10,6 +10,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\DaftarController;
 use App\Http\Controllers\User\HistoryController;
 use App\Http\Controllers\User\HomeController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 // Auth
 Route::get('/daftar', [DaftarController::class, 'index'])->name('daftar');
@@ -17,7 +18,7 @@ Route::get('/daftar', [DaftarController::class, 'index'])->name('daftar');
 
 // User
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/history', [HistoryController::class, 'index'])->name('history');
+Route::get('/history', [DashboardController::class, 'history'])->name('history');
 
 
 Route::get('/', function(){return view('welcome', ['title' => 'Welcome']);});
