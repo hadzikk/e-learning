@@ -1,4 +1,4 @@
-<x-header></x-header>
+<x-layouts.header></x-layouts.header>
 {{ $slot }}
 </body>
 </html>

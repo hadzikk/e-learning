@@ -1,5 +1,5 @@
-<x-app>
-    <x-login></x-login>
+<x-layouts.app>
+    <x-modals.login></x-modals.login>
 
     {{-- Navigation --}}
     <nav class="navigation min-w-full py-7 px-5 shadow flex justify-between items-center">
@@ -27,7 +27,7 @@
             </div>
         </div>
     </div>
-    <x-footer></x-footer>
+    <x-layouts.footer></x-layouts.footer>
 
     <script src="{{ asset('js/script.js') }}"></script>
-</x-app>
+</x-layouts.app>

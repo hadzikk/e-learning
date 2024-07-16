@@ -25,7 +25,7 @@ class DashboardController extends Controller
         $user = Auth::user();
         $enrolledCourses = $user->courses;
 
-        return view('history', compact('user', 'enrolledCourses'));
+        return view('user.history', compact('user', 'enrolledCourses'));
     }
 
     public function admin()

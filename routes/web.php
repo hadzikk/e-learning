@@ -8,11 +8,19 @@ use App\Http\Controllers\ModuleController;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DaftarController;
+use App\Http\Controllers\User\HistoryController;
+use App\Http\Controllers\User\HomeController;
 
+// Auth
 Route::get('/daftar', [DaftarController::class, 'index'])->name('daftar');
 
+
+// User
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/history', [HistoryController::class, 'index'])->name('history');
+
+
 Route::get('/', function(){return view('welcome', ['title' => 'Welcome']);});
-Route::get('/home', function(){return view('welcome', ['title' => 'Welcome']);});
 
 // Authentication routes
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');

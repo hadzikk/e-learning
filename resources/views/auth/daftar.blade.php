@@ -1,4 +1,4 @@
-<x-app>
+<x-layouts.app>
     <div class="w-full h-screen flex overflow-hidden">
         <div class="w-2/6 h-full overflow-hidden relative"> 
             <video src="{{ asset('videos/7169782-uhd_2160_4096_25fps.mp4') }}" class="w-full bg-cover absolute z-0" autoplay muted loop></video>
@@ -27,17 +27,17 @@
                         <span class="w-full">email</span>
                         <div class="flex items-center w-full py-1 px-1 shadow rounded mb-3">
                             <i class="fa-regular fa-envelope px-3"></i>
-                            <input id="email" name="email" type="email" placeholder="masukkan email anda..." class="font-nunito w-full py-1 px-1 focus:outline-none rounded">
+                            <input id="email" name="email" type="email" placeholder="masukkan email anda..." class="font-nunito w-full py-1 px-1 focus:outline-none rounded" required>
                         </div>
                         <span class="w-full">password</span>
                         <div class="flex items-center w-full py-1 px-1 shadow rounded mb-3">
                             <i class="fa-solid fa-key px-3"></i>
-                            <input id="password" name="password" type="password" placeholder="buat password anda..." class="font-nunito w-full py-1 px-1 focus:outline-none rounded">
+                            <input id="password" name="password" type="password" placeholder="buat password anda..." class="font-nunito w-full py-1 px-1 focus:outline-none rounded" required>
                         </div>
                         <span class="w-full">konfirmasi password</span>
                         <div class="flex items-center w-full py-1 px-1 shadow rounded mb-3">
                             <i></i>
-                            <input id="password_confirmation" name="password_confirmation" type="password" placeholder="konfirmasi ulang password anda..." class="font-nunito w-full py-1 px-1 focus:outline-none rounded">
+                            <input id="password_confirmation" name="password_confirmation" type="password" placeholder="konfirmasi ulang password anda..." class="font-nunito w-full py-1 px-1 focus:outline-none rounded" required>
                         </div>
                         <button type="submit" class="w-full py-3 px-5 rounded bg-black text-white">selesai</button>
                     </form>
@@ -45,6 +45,7 @@
             </div>
         </div>
     </div>
+<x-layouts.footer></x-layouts.footer>
 
     <script src="{{ asset('js/script.js') }}"></script>
-</x-app>
+</x-layouts.app>

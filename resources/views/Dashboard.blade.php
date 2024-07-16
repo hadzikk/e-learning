@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container mx-auto pb-8">
-        <h2 class="text-3xl font-semibold mb-4">My Dashboard</h2>
+        <h2 class="text-3xl font-semibold mb-4">Ini Dashboard</h2>
         <a href="{{ route('history') }}" class="text-blue-500 hover:underline">View My History</a>
         @if(session('success'))
             <div class="bg-green-100 text-green-700 p-4 rounded mb-4">
