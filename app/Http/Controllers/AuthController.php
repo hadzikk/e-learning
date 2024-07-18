@@ -11,7 +11,7 @@ class AuthController extends Controller
 {
 
     public function showRegistrationForm(){
-        return view('register');
+        return view('auth.register');
     }
 
     public function showLoginForm(){
@@ -33,7 +33,7 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect('/dashboard');
+        return redirect('/home');
     }
 
     public function authenticated(Request $request, $user)
