@@ -12,15 +12,6 @@
         </div>
     </div>
 
-    @foreach ($user->courses as $course)
-        <div class="w-full flex gap-4">
-            <div class="bg-white w-96 h-60 shadow rounded">
-
-            </div>
-        </div>
-    @endforeach
-    
-
     <div class="bg-white shadow-md rounded-lg p-6 mb-4">
         <h2 class="text-2xl font-semibold mb-4">Courses</h2>
         <ul>

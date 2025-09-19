@@ -43,7 +43,7 @@ class CourseController extends Controller
     {
         $user = auth()->user();
         $user->courses()->attach($course->id);
-        return redirect()->route('dashboard')->with('success', 'Successfully enrolled in the course.');
+        return redirect()->route('home')->with('success', 'Successfully enrolled in the course.');
     }
 
     public function unenrollUser(Course $course)
@@ -67,7 +67,7 @@ class CourseController extends Controller
             $result->delete();
         }
 
-        return redirect()->route('dashboard')->with('success', 'Successfully unenrolled from the course.');
+        return redirect()->route('home')->with('success', 'Successfully unenrolled from the course.');
     }
 
     public function edit(Course $course)

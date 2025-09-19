@@ -12,19 +12,19 @@ use App\Http\Controllers\User\HistoryController;
 use App\Http\Controllers\User\HomeController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
-// Auth
-Route::get('/daftar', [DaftarController::class, 'index'])->name('daftar');
+// // Auth
+// Route::get('/daftar', [DaftarController::class, 'index'])->name('daftar');
 
 
 // User
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+
 Route::get('/history', [DashboardController::class, 'history'])->name('history');
 
 
 Route::get('/', function(){return view('welcome', ['title' => 'Welcome']);});
 
 // Authentication routes
-Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
+Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('daftar');
 Route::post('/register', [AuthController::class, 'register']);
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
@@ -32,6 +32,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Routes for authenticated users
 Route::middleware('auth')->group(function () {
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/history', [DashboardController::class, 'history'])->name('history');
 
